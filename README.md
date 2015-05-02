@@ -4,6 +4,8 @@ Starter
 A clean base theme ideal for creating new hugo themes. Created by http://www.gregboggs.com
 
 Base features:
+  - Top menu
+  - Main sidebar menu
   - Correct header markup
   - Clean body markup
   - Blog style index page
@@ -11,7 +13,8 @@ Base features:
   - Single page template
   - Post template
   - Google Analytics
-  - Code highlighting. 
+  - Code highlighting
+  - Built in SEO, canonical, description, keywords
 
 To Use
 ------
