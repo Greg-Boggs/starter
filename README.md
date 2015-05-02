@@ -9,9 +9,11 @@ Base features:
   - Correct header markup
   - Clean body markup
   - Blog style index page
+  - Pagination
   - Category list page
   - Single page template
   - Post template
+  - Read time and word count on each post
   - Google Analytics
   - Code highlighting
   - Built in SEO, canonical, description, keywords
