@@ -13,7 +13,8 @@ Base features:
   - Google Analytics
   - Code highlighting. 
 
-To use:
+To Use
+------
     hugo new site mysite
     cd mysite
     git clone https://github.com/Greg-Boggs/starter themes/starter
