@@ -1,0 +1,25 @@
+  <div class="footer">
+    <ul class="footer-nav">
+        {{ with .Site.Params.github }}<li class="footer-nav-item"><a href="{{ . }}"><i class="fa fa-github-square fa-3x"></i></a></li>{{ end }}
+        {{ with .Site.Params.linkedin }}<li class="footer-nav-item"><a href="{{ . }}"><i class="fa fa-linkedin-square fa-3x"></i></a>{{ end }}
+        {{ with .Site.Params.twitter }}<li class="footer-nav-item"><a href="{{ . }}"><i class="fa fa-twitter-square fa-3x"></i></a></li>{{ end }}
+    </ul>
+
+    <p class="copyright">Copyright &copy; {{ .Now.Format "2006" }} <br />
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/Greg-Boggs/starter">Starter</a></p>
+  </div>
+
+  {{ if isset .Site.Params "highlight" }}
+    <script src="{{ .Site.BaseUrl }}/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  {{ end }}
+  {{ with .Site.Params.googleAnalytics }}
+    <script>
+      var _gaq=[['_setAccount','{{ . }}'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+  {{ end }}
+</body>
+</html>

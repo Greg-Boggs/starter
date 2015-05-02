@@ -1,0 +1,12 @@
+name = "Starter"
+license = "GPL3"
+licenselink = "https://github.com/Greg-Boggs/starter/LICENSE"
+description = "A clean base theme ideal for creating new hugo themes. The theme includes analytics, code highlighting, and categorization."
+homepage = "https://github.com/Greg-Boggs/starter"
+tags = ["base", "blog", "website"]
+features = ["blog", "highlighting", "analytics"]
+min_version=0.13
+
+[author]
+    name = "Greg Boggs"
+    homepage = "http://www.gregboggs.com"

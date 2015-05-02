@@ -1,0 +1,9 @@
+<div class="header">
+  <a class="brand" href="{{ .Site.BaseUrl }}">{{ .Site.Title }}</a>
+  <ul class="menu top-menu">
+    <li class="nav-item"><a href="{{ .Site.BaseUrl }}/">Home</a></li>
+    {{ range .Site.Menus.top }}
+      <li>class="nav-item"><a href="{{ .Permalink  }}">{{ .LinkTitle }}</a></li>
+    {{ end }}
+  </ul>
+</div>

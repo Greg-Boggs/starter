@@ -1,0 +1,19 @@
+{{ partial "head.html" . }}
+<div class="content container">
+  <div class="post">
+    <h1>{{ .Title }}</h1>
+    <div class="post-meta">
+      {{ .Date.Format "Jan 2, 2006" }} &middot; {{ .ReadingTime }} minute read - {{ .FuzzyWordCount }} words
+      {{ if isset .Params "categories" }}
+        {{ $baseUrl := .Site.BaseUrl }}
+        {{ range .Params.categories }}
+          <a class="label" href="{{ $baseUrl }}/categories/{{ . | urlize }}">{{ . }}</a>
+        {{ end }}
+      {{ end }}
+    </div>
+    <div class="post">
+      {{ .Content }}
+    </div>
+  </div>
+</div>
+{{ partial "foot.html" . }}

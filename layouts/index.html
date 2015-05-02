@@ -1,0 +1,26 @@
+{{ partial "head.html" . }}
+<div class="content container">
+  <div class="posts">
+    {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+    {{ range $paginator.Pages }}
+    <div class="post">
+      <h1 class="post-title">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </h1>
+      <div class="post-meta">
+        {{ .Date.Format "Jan 2, 2006" }} &middot; {{ .ReadingTime }} minute read &middot; {{ .FuzzyWordCount }} words
+        {{ if isset .Params "categories" }}
+          {{ $baseUrl := .Site.BaseUrl }}
+          {{ range .Params.categories }}
+            <a class="label" href="{{ $baseUrl }}/categories/{{ . | urlize }}">{{ . }}</a>
+          {{ end }}
+        {{ end }}
+      </div>
+      <p class="summary">{{ .Summary }}</p>
+      <a class="read-more" href="{{ .Permalink }}">Read On &rarr;</a>
+    </div>
+    {{ end }}
+    {{ template "_internal/pagination.html" . }}
+  </div>
+</div>
+{{ partial "foot.html" . }}
