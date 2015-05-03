@@ -20,7 +20,7 @@ Base features:
 
 To Use
 ------
-    hugo new site mysite
-    cd mysite
+    git clone https://github.com/Greg-Boggs/hugo-starter-kickstart
+    cd hugo-starter-kickstart
     git clone https://github.com/Greg-Boggs/starter themes/starter
 
